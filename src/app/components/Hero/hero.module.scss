@@ -1,0 +1,24 @@
+.sHero {
+	background: linear-gradient(90deg, #4831d4 68%, #ccf381 32%);
+	padding: 200px 0 162px;
+	margin-bottom: 100px;
+	height: 100vh;
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 51px;
+	}
+}
+.sMarquee {
+	background-color: #653df5;
+	padding: 24px 0;
+	margin-bottom: 112px;
+	overflow: hidden;
+	.anotherContainer {
+		width: 100%;
+		overflow: hidden;
+		display: flex;
+		gap: 16px;
+	}
+}
