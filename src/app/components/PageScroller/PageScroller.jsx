@@ -31,7 +31,7 @@ export default function PageScroller({ children }) {
 					currentIndex = nextIndex;
 					gsap.to(window, {
 						scrollTo: { y: sections[currentIndex], autoKill: false },
-						duration: 1.2,
+						duration: 0.8,
 						ease: "power3.inOut",
 						onComplete: () => {
 							isAnimating = false;

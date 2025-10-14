@@ -1,6 +1,5 @@
 import { Inter, Poppins } from "next/font/google";
 import "./globals.scss";
-import "./styles/main.scss";
 import Header from "./components/Header/Header";
 
 const poppins = Poppins({
