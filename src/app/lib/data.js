@@ -1,5 +1,4 @@
-import { NextResponse } from "next/server";
-
+// Aqui vivem seus dados. No futuro, isso poderia ser uma chamada a um banco de dados.
 const projects = [
 	{
 		id: 1,
@@ -45,6 +44,6 @@ const projects = [
 	},
 ];
 
-export async function GET(request) {
-	return NextResponse.json(projects);
+export async function getProjects() {
+	return projects;
 }
