@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import ButtonMenu from "./ButtonMenu/ButtonMenu";
-import Logo from "./Logo/Logo";
-import Menu from "./Menu/Menu";
+import ButtonMenu from "./ButtonMenu";
+import Logo from "./Logo";
+import Menu from "./Menu";
 
 import styles from "./header.module.scss";
 

@@ -6,7 +6,7 @@ export default function () {
 			<h2>Sobre mim:</h2>
 			<p>
 				Sou um desenvolvedor Front-End apaixonado por transformar ideias complexas em experiências digitais fluidas e intuitivas. Com mais de 4 anos de jornada no desenvolvimento
-				web, meu trabalho vai além do código: busco criar interfaces que encantam e engajam, utilizando animações avançadas com Framer Motion e GSAP para dar vida a cada interação.
+				web, meu trabalho vai além do código: busco criar interfaces que encantam e engajam, utilizando animações avançadas para dar vida a cada interação.
 			</p>
 			<p>
 				Fui responsável pelo front-end do site da Compagas, a companhia de gás que atende todo o estado do Paraná. Trabalhei no desenvolvimento do site da Furukawa Solutions, uma

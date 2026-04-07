@@ -1,6 +1,6 @@
 import { Inter, Poppins } from "next/font/google";
-import "./globals.scss";
-import Header from "./components/Header/Header";
+import "../styles/globals.scss";
+import Header from "../components/layout/Header/Header";
 
 const poppins = Poppins({
 	variable: "--font-poppins",

@@ -1,10 +1,10 @@
-import Container from "../Container/Container";
-import Background from "./Background/Background";
+import Container from "../../ui/Container/Container";
+import Background from "./Background";
 import styles from "./sobre.module.scss";
 
 export default function Sobre() {
 	return (
-		<section className={styles.sSobre}>
+		<section className={`${styles.sSobre} section`}>
 			<Container>
 				<div className="wrapper">
 					<Background />

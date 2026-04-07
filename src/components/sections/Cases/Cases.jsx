@@ -1,7 +1,7 @@
-import Container from "../Container/Container";
-import CasesCarrousel from "./CasessCarrousel/CasesCarrousel";
-import CasesTitle from "./CasesTitle/CasesTitle";
-import Disclaimer from "./Disclaimer/Disclaimer";
+import Container from "../../ui/Container/Container";
+import CasesCarrousel from "./CasesCarrousel";
+import CasesTitle from "./CasesTitle";
+import Disclaimer from "./Disclaimer";
 import styles from "./cases.module.scss";
 
 export default function Cases({ projects }) {

@@ -1,4 +1,4 @@
-import Badge from "./Badge/Badge";
+import Badge from "./Badge";
 import styles from "./marquee-hero.module.scss";
 
 export default function MarqueeContainer() {

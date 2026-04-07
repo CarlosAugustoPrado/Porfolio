@@ -8,7 +8,7 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import CaseSlide from "./CasesSlide/CasesSlide";
+import CaseSlide from "./CasesSlide";
 
 import styles from "./cases-carrousel.module.scss";
 

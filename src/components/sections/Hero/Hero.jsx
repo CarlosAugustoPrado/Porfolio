@@ -1,9 +1,9 @@
 import styles from "./hero.module.scss";
 
-import Container from "../Container/Container";
-import TextHero from "./TextHero/TextHero";
-import ImageAreaHero from "./ImageHero/ImageAreaHero";
-import MarqueeContainer from "./MarqueeHero/MarqueeContainer";
+import Container from "../../ui/Container/Container";
+import TextHero from "./TextHero";
+import ImageAreaHero from "./ImageAreaHero";
+import MarqueeContainer from "./MarqueeContainer";
 
 export default function SectionHero() {
 	return (
