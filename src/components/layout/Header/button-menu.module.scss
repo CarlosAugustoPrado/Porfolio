@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "../../../styles/mixins" as *;
 
 $hamburger-width: 44px;
 $hamburger-height: 16px;
@@ -29,7 +30,10 @@ $active-color: #653df5;
 		height: $bar-height;
 		background-color: $inactive-color;
 		border-radius: 2px;
-		transition: transform $transition-speed ease, opacity $transition-speed ease, background-color $transition-speed ease;
+		transition:
+			transform $transition-speed ease,
+			opacity $transition-speed ease,
+			background-color $transition-speed ease;
 	}
 	span:nth-child(1) {
 		top: 0;
@@ -57,5 +61,12 @@ $active-color: #653df5;
 			transform: translateY(-(math.div($hamburger-height, 2) - math.div($bar-height, 2))) rotate(-45deg);
 			width: $hamburger-width;
 		}
+		@include responsive(768px) {
+			transform: scale(0.8); // Se quiser menor, coloque 0.7. Maior, 0.9.
+		}
+	}
+	@include responsive(768px) {
+		top: 40px;
+		right: 40px;
 	}
 }

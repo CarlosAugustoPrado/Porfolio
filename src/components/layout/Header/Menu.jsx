@@ -9,9 +9,9 @@ export default function Menu({ isOpen }) {
 		<nav id="main-menu" className={menuClasses}>
 			<ul>
 				<li>
-					<a href="/CV-CarlosAugustoPrado-2025.pdf" download="CV-CarlosAugustoPrado-2025.pdf">
+					<Link href="/curriculo">
 						<span>Currículo</span>
-					</a>
+					</Link>
 				</li>
 			</ul>
 			<div className={styles.contact}>

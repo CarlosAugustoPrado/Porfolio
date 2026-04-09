@@ -1,3 +1,5 @@
+@use "../../../styles/mixins" as *;
+
 .swiperProjects {
 	.action {
 		display: flex;
@@ -31,6 +33,14 @@
 				line-height: 150%;
 				color: #653df5;
 				font-weight: 600;
+			}
+		}
+	}
+	@include responsive(768px) {
+		.action {
+			margin-top: 60px;
+			:global(.swiper-pagination-bullets) {
+				display: none;
 			}
 		}
 	}

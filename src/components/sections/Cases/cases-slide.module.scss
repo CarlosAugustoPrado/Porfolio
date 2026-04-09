@@ -1,3 +1,4 @@
+@use "../../../styles/mixins" as *;
 .case {
 	display: flex;
 	gap: 32px;
@@ -105,6 +106,18 @@
 					transform-origin: 100% 0%;
 					transform: translateX(-1px) rotate(0deg);
 				}
+			}
+		}
+	}
+	@include responsive(991px) {
+		flex-direction: column;
+	}
+	@include responsive(768px) {
+		.textArea {
+			max-width: unset;
+			gap: 12px;
+			h3 {
+				font-size: 2rem;
 			}
 		}
 	}

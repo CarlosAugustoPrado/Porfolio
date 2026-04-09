@@ -13,7 +13,7 @@ export default async function Home() {
 			<PageScroller>
 				<SectionHero />
 				<Cases projects={projects} />
-				<Footer />
+				{/* <Footer /> */}
 			</PageScroller>
 		</>
 	);

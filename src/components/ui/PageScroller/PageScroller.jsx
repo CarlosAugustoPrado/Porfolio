@@ -11,15 +11,17 @@ export default function PageScroller({ children }) {
 	const mainRef = useRef(null);
 
 	useEffect(() => {
-		let ctx = gsap.context(() => {
+		let mm = gsap.matchMedia(mainRef);
+
+		mm.add("(min-width: 992px)", () => {
+			document.body.style.overflow = "hidden";
+
 			const sections = gsap.utils.toArray(".section");
 			let isAnimating = false;
 			let currentIndex = 0;
 
 			const handleWheel = (e) => {
 				e.preventDefault();
-
-				console.log("🖱️ Evento de scroll detectado!", e.deltaY);
 
 				if (isAnimating) return;
 
@@ -31,8 +33,8 @@ export default function PageScroller({ children }) {
 					currentIndex = nextIndex;
 					gsap.to(window, {
 						scrollTo: { y: sections[currentIndex], autoKill: false },
-						duration: 0.8,
-						ease: "power3.inOut",
+						duration: 1.2,
+						ease: "power2.inOut",
 						onComplete: () => {
 							isAnimating = false;
 						},
@@ -43,10 +45,16 @@ export default function PageScroller({ children }) {
 			};
 
 			window.addEventListener("wheel", handleWheel, { passive: false });
-			return () => window.removeEventListener("wheel", handleWheel);
-		}, mainRef);
 
-		return () => ctx.revert();
+			return () => {
+				window.removeEventListener("wheel", handleWheel);
+				document.body.style.overflow = "";
+			};
+		});
+
+		return () => {
+			mm.revert();
+		};
 	}, []);
 
 	return <main ref={mainRef}>{children}</main>;

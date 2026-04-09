@@ -1,13 +1,25 @@
+@use "../../../styles/mixins" as *;
+
 .sHero {
 	background: linear-gradient(90deg, #4831d4 68%, #ccf381 32%);
 	padding: 200px 0 162px;
-	margin-bottom: 100px;
+
 	height: 100vh;
 	.content {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		gap: 51px;
+	}
+	@include responsive(1200px) {
+		padding: 100px 0;
+		.content {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	@include responsive(768px) {
+		background: linear-gradient(90deg, #4831d4 82%, #ccf381 18%);
 	}
 }
 .sMarquee {

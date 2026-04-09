@@ -8,7 +8,8 @@
 	outline: none;
 	border: none;
 	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+	font-family: var(--font-sf-ui-text), "Poppins", sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -19,7 +20,6 @@ img {
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	overflow: hidden;
 }
 
 html {

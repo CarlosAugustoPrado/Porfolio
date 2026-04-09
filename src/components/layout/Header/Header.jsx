@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import ButtonMenu from "./ButtonMenu";
 import Logo from "./Logo";
 import Menu from "./Menu";
@@ -9,6 +10,10 @@ import styles from "./header.module.scss";
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const pathname = usePathname();
+
+	const hiddenRoutes = ["/curriculo"];
+	if (hiddenRoutes.includes(pathname)) return null;
 
 	const toggleMenu = () => {
 		setIsMenuOpen(!isMenuOpen);
@@ -16,7 +21,7 @@ export default function Header() {
 
 	return (
 		<header className={styles.mainHeader}>
-			<Logo />
+			<Logo className={styles.mainLogo} />
 			<ButtonMenu onClick={toggleMenu} isOpen={isMenuOpen} />
 			<Menu isOpen={isMenuOpen} />
 		</header>

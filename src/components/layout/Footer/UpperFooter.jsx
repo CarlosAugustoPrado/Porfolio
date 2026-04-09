@@ -1,3 +1,5 @@
+import styles from "./uper-footer.module.scss"
+
 export default function UpperFooter() {
 	return (
 		<div className="upper-footer">
