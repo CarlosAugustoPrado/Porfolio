@@ -35,7 +35,7 @@ const inter = Inter({
 
 export const metadata = {
 	title: "Portfolio devCarlosAugustoPrado",
-	description: "Projeto do portfolio do dev Carlos Augusto Prado",
+	description: "Portfolio do desenvolvedor Carlos Augusto Prado com projetos e currículo",
 };
 
 export default function RootLayout({ children }) {

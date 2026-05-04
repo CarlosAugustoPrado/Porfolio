@@ -16,9 +16,9 @@ export default function Menu({ isOpen }) {
 			</ul>
 			<div className={styles.contact}>
 				<p>Fale comigo</p>
-				<a href="mailto:devcarlosaugustoprado@gmail.com">
-					<span>devcarlosaugustoprado@gmail.com</span>
-				</a>
+				<Link href="/contato">
+					<span>Contato</span>
+				</Link>
 			</div>
 		</nav>
 	);

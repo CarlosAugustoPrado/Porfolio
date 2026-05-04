@@ -19,9 +19,11 @@ export default function Header() {
 		setIsMenuOpen(!isMenuOpen);
 	};
 
+	const isContactPage = pathname === "/contato";
+
 	return (
 		<header className={styles.mainHeader}>
-			<Logo className={styles.mainLogo} />
+			{!isContactPage && <Logo className={styles.mainLogo} />}
 			<ButtonMenu onClick={toggleMenu} isOpen={isMenuOpen} />
 			<Menu isOpen={isMenuOpen} />
 		</header>
