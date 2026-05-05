@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./contato.module.scss";
 import ContactForm from "./ContactForm";
+import ReturnButton from "./ReturnButton";
 
 export const metadata = {
 	title: "Contato | devCarlosAugustoPrado",
@@ -11,6 +12,7 @@ export default function CurriculoPage() {
 	return (
 		<main className={styles.mainContato}>
 			<ContactForm />
+			<ReturnButton />
 		</main>
 	);
 }
