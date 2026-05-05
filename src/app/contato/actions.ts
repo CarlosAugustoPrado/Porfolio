@@ -6,9 +6,9 @@ import { z } from "zod";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
-	name: z.string().min(2, { error: "O nome deve ter pelo menos 2 caracteres." }),
+	name: z.string().min(2, { error: "O nome deve ter pelo menos 2 caracteres." }).max(100, { error: "Nome muito longo." }),
 	email: z.email({ error: "Introduza um e-mail válido." }),
-	message: z.string().min(10, { error: "A mensagem deve ter pelo menos 10 caracteres." }),
+	message: z.string().min(10, { error: "A mensagem deve ter pelo menos 10 caracteres." }).max(2000, { error: "A mensagem não pode ter mais de 2000 caracteres." }),
 });
 
 export type FormState = {
@@ -17,6 +17,11 @@ export type FormState = {
 	errors?: Record<string, string[] | undefined>;
 };
 export async function sendEmailAction(prevState: FormState, formData: FormData): Promise<FormState> {
+	// Honeypot: bots preenchem esse campo, humanos não
+	if (formData.get("_honeypot")) {
+		return { success: false, message: "Spam detectado." };
+	}
+
 	const validatedFields = contactSchema.safeParse({
 		name: formData.get("name"),
 		email: formData.get("email"),
@@ -35,7 +40,7 @@ export async function sendEmailAction(prevState: FormState, formData: FormData):
 
 	try {
 		await resend.emails.send({
-			from: "Contact Form <onboarding@resend.dev>",
+			from: "Carlos Prado <contato@carlosaugustoprado.dev>",
 			to: ["devcarlosaugustoprado@gmail.com"],
 			subject: `Nova mensagem de ${name}`,
 			replyTo: email,

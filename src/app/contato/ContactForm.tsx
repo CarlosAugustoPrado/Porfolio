@@ -41,6 +41,14 @@ export default function ContactForm() {
 
 	return (
 		<form action={formAction} className={styles.formContainer} noValidate>
+			<input
+				type="text"
+				name="_honeypot"
+				style={{ display: "none" }}
+				tabIndex={-1}
+				autoComplete="off"
+				aria-hidden="true"
+			/>
 			<div className={styles.header}>
 				<h1>Me mande uma mensagem!</h1>
 				<p>Tem uma questão, proposta ou apenas quer dizer oi? Vá em frente.</p>
