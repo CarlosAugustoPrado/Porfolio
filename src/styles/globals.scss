@@ -1,0 +1,52 @@
+@use "./main" as *;
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	box-sizing: border-box;
+	font-family: var(--font-sf-ui-text), "Poppins", sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #f5f4fc;
+}
+
+html {
+	font-size: 62.5%;
+
+	@media (max-width: 1300px) {
+		font-size: 58%;
+	}
+	@media (max-width: 991px) {
+		font-size: 62.5%;
+	}
+}
+
+button {
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}

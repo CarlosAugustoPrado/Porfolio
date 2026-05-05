@@ -1,0 +1,36 @@
+@use "../../../styles/mixins" as *;
+
+.sHero {
+	background: linear-gradient(90deg, #4831d4 68%, #ccf381 32%);
+	padding: 200px 0 162px;
+
+	height: 100vh;
+	.content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 51px;
+	}
+	@include responsive(1200px) {
+		padding: 100px 0;
+		.content {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+	@include responsive(768px) {
+		background: linear-gradient(90deg, #4831d4 82%, #ccf381 18%);
+	}
+}
+.sMarquee {
+	background-color: #653df5;
+	padding: 24px 0;
+	margin-bottom: 112px;
+	overflow: hidden;
+	.anotherContainer {
+		width: 100%;
+		overflow: hidden;
+		display: flex;
+		gap: 16px;
+	}
+}
