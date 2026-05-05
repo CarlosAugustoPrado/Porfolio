@@ -27,6 +27,7 @@ export default function CasesCarrousel({ projects }) {
 			spaceBetween={30}
 			loop={true}
 			slidesPerView={1}
+			grabCursor={true}
 			autoplay={{
 				delay: 2500,
 				disableOnInteraction: false,
@@ -38,6 +39,7 @@ export default function CasesCarrousel({ projects }) {
 				swiper.params.navigation.prevEl = prevButtonRef.current;
 				swiper.params.navigation.nextEl = nextButtonRef.current;
 				swiper.params.pagination.el = paginationBulletsRef.current;
+				swiper.params.pagination.clickable = true;
 				swiper.navigation.init();
 				swiper.navigation.update();
 				swiper.pagination.init();
