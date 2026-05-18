@@ -1,8 +1,11 @@
-import Link from "next/link";
+import { Link } from "../../../i18n/routing";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 import styles from "./menu.module.scss";
 
 export default function Menu({ isOpen }) {
+	const t = useTranslations("menu");
 	const menuClasses = `${styles.mainMenu} ${isOpen ? styles.active : ""}`;
 
 	return (
@@ -10,15 +13,17 @@ export default function Menu({ isOpen }) {
 			<ul>
 				<li>
 					<Link href="/curriculo">
-						<span>Currículo</span>
+						<span>{t("curriculo")}</span>
 					</Link>
 				</li>
 			</ul>
 			<div className={styles.contact}>
-				<p>Fale comigo</p>
+				<p>{t("contact_label")}</p>
 				<Link href="/contato">
-					<span>Contato</span>
+					<span>{t("contato")}</span>
 				</Link>
+				<span className={styles.languageDivider} />
+				<LanguageSwitcher />
 			</div>
 		</nav>
 	);

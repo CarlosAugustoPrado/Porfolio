@@ -1,21 +1,20 @@
 import styles from "./text-hero.module.scss";
+import { useTranslations } from "next-intl";
 
 export default function TextHero() {
+	const t = useTranslations("hero");
 	return (
 		<div className={styles.textArea}>
 			<p className={styles.smallText}>
-				Olá, sou o <strong>Carlos Augusto Prado</strong>👋🏻
+				{t("greeting")} <strong>{t("name")}</strong>👋🏻
 			</p>
 			<h1>
 				Creative <br />
 				Developer.
 			</h1>
-			<p className={styles.description}>
-				Transformo designs ambiciosos em código com precisão <strong>pixel-perfect</strong>. <br /> Especialista em
-				interfaces imersivas e animações complexas de alta performance.
-			</p>
+			<p className={styles.description} dangerouslySetInnerHTML={{ __html: t.raw("description") }}></p>
 			<a href="mailto:devcarlosaugustoprado@gmail.com" className={styles.contato}>
-				<span>Comece um projeto</span>
+				<span>{t("cta")}</span>
 			</a>
 		</div>
 	);

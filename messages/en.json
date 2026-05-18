@@ -1,0 +1,119 @@
+{
+	"metadata": {
+		"home_title": "Portfolio | devCarlosAugustoPrado",
+		"home_description": "Portfolio of developer Carlos Augusto Prado with projects and resume",
+		"curriculo_title": "Resume | devCarlosAugustoPrado",
+		"curriculo_description": "Resume of developer Carlos Augusto Prado",
+		"contato_title": "Contact | devCarlosAugustoPrado",
+		"contato_description": "Get in touch with developer Carlos Augusto Prado"
+	},
+	"hero": {
+		"greeting": "Hi, I'm",
+		"name": "Carlos Augusto Prado",
+		"description": "I turn ambitious designs into code with <strong>pixel-perfect</strong> precision. Specialist in immersive interfaces and high-performance complex animations.",
+		"cta": "Start a project"
+	},
+	"cases": {
+		"title": "Some of my work:",
+		"disclaimer": "Flexible Tech Stack:* From mastery of the fundamentals (Vanilla HTML/CSS/JS) to modern high-performance architecture with React and Next.js 14+.",
+		"view_project": "View project"
+	},
+	"sobre": {
+		"title": "About me:",
+		"p1": "I'm a Front-End developer passionate about transforming complex ideas into fluid and intuitive digital experiences. With over 4 years in web development, my work goes beyond code: I aim to create interfaces that delight and engage, using advanced animations to bring every interaction to life.",
+		"p2": "I was responsible for the front-end of Compagas's website, the natural gas company serving the entire state of Paraná. I worked on the Furukawa Solutions website, a global leader in fiber optics technology. I took part in the front-end development for Nissei, one of the top 10 pharmacy chains in Brazil. I also had the pleasure of building the new NextQuimica website, a company providing nanomaterial services and a benchmark in innovative solutions.",
+		"p3": "Before that, I also contributed to other major projects, such as the new Colégio Pontual website and the new Instituto da Cerveja Brasil website."
+	},
+	"menu": {
+		"curriculo": "Resume",
+		"contact_label": "Get in touch",
+		"contato": "Contact"
+	},
+	"contact": {
+		"title": "Send me a message!",
+		"subtitle": "Have a question, proposal, or just want to say hi? Go ahead.",
+		"name_label": "Your name",
+		"name_placeholder": "Enter your name",
+		"email_label": "Your e-mail",
+		"email_placeholder": "Enter your e-mail",
+		"message_label": "Your message",
+		"message_placeholder": "Hi, I think we need a design system for one of our products at Company X. When can we get in touch to discuss this?",
+		"submit": "Send",
+		"sending": "Sending...",
+		"success": "Message sent successfully! I'll get back to you soon.",
+		"error_general": "A technical error occurred while sending. Please try again later.",
+		"error_form": "Please fix the errors in the form.",
+		"error_name_min": "Name must be at least 2 characters.",
+		"error_name_max": "Name is too long.",
+		"error_email": "Please enter a valid e-mail address.",
+		"error_message_min": "Message must be at least 10 characters.",
+		"error_message_max": "Message cannot exceed 2000 characters."
+	},
+	"curriculo": {
+		"location": "Minas Gerais, Brazil",
+		"main_tech": "Core Technologies:",
+		"styling": "Styling & UI:",
+		"animations": "Animations",
+		"performance": "Performance & Quality:",
+		"backend": "Back-end & DevOps:",
+		"role": "Senior Front-End Engineer",
+		"summary": "Focused on building high-performance, accessible software and scalable systems that drive real business impact.",
+		"experience_title": "Experience",
+		"experience_summary": "Front-end engineering with a focus on performance and micro-interactions. Over 4 years helping major brands turn ideas into high-impact digital experiences.",
+		"currently": "Present",
+		"jobs": {
+			"meta": {
+				"company": "META (CLIENT: BANCO BMG)",
+				"position": "Developer II",
+				"period": "December/2025 – Present",
+				"summary": "Working in the banking ecosystem, always focused on security and accessibility for the user.",
+				"points": [
+					"Implemented Micro Frontends architecture using Webpack Module Federation, drastically reducing coupling between development squads.",
+					"Defined and established React and TypeScript componentization standards, successfully adopted by the entire team.",
+					"Ensured compliance with strict security and accessibility rules required by the banking ecosystem.",
+					"Stack: React, Next.js, TypeScript, GSAP, TailwindCSS, Styled Components, Webpack, Module Federation."
+				]
+			},
+			"nerdweb": {
+				"company": "NERDWEB",
+				"position": "Senior Front-End Architect",
+				"period": "July/2023 – Present",
+				"summary": "As a Front-End Architect, I built websites for major Brazilian companies including Helyo, Nissei, Positivo, FurukawaSolutions, Byprice, NextQuimica, and many others.",
+				"points": [
+					"Lead technical stack and software architecture decisions for multiple large-scale corporate client projects (FurukawaSolutions, Positivo, Compagas, NextQuimica).",
+					"Deliver with an absolute focus on Core Web Vitals and technical SEO, ensuring high organic rankings and better conversion rates.",
+					"Achieved and maintained scores above 94 on Google performance metrics (Lighthouse/Core Web Vitals) across all applications, ensuring a smooth and optimized user experience.",
+					"Perform complex system integrations using Headless WordPress and REST/GraphQL APIs.",
+					"Stack: React, Next.js, TypeScript, GSAP, TailwindCSS, HTML, SCSS, JavaScript"
+				]
+			},
+			"seven": {
+				"company": "7 SEVEN TRENDS",
+				"position": "Full-Stack Developer Jr",
+				"period": "April/2023 – July/2023",
+				"summary": "As a Jr Full-Stack Developer, I learned a lot about the PHP ecosystem, especially with Laravel, as well as CI/CD and Docker techniques.",
+				"points": [
+					"Developed the new website for Colégio Pontual Alfenas and Instituto da Cerveja Brasil.",
+					"Implemented REST APIs using PHP",
+					"Applied automated testing and used AWS services.",
+					"Constantly used CI/CD techniques for deployment, integrating automated tests and pipelines."
+				]
+			},
+			"freelancer": {
+				"company": "FREELANCER",
+				"position": "Front-End Developer Jr",
+				"period": "February/2020 – April/2023",
+				"summary": "Where it all began — developing my first pages for local businesses and providing services for design agencies.",
+				"points": [
+					"Created several conversion-focused landing pages",
+					"Developed custom WordPress themes.",
+					"Styled projects with advanced techniques using SASS, Styled Components, Framer Motion and Stitches.",
+					"Automated tasks with Gulp, reducing development time by up to 40%."
+				]
+			}
+		}
+	},
+	"language_switcher": {
+		"label": "PT"
+	}
+}

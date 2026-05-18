@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "home_title": "Portfolio | devCarlosAugustoPrado",
+    "home_description": "Portfolio do desenvolvedor Carlos Augusto Prado com projetos e currículo",
+    "curriculo_title": "Currículo | devCarlosAugustoPrado",
+    "curriculo_description": "Currículo do desenvolvedor Carlos Augusto Prado",
+    "contato_title": "Contato | devCarlosAugustoPrado",
+    "contato_description": "Entre em contato com o desenvolvedor Carlos Augusto Prado"
+  },
+  "hero": {
+    "greeting": "Olá, sou o",
+    "name": "Carlos Augusto Prado",
+    "description": "Transformo designs ambiciosos em código com precisão <strong>pixel-perfect</strong>. Especialista em interfaces imersivas e animações complexas de alta performance.",
+    "cta": "Comece um projeto"
+  },
+  "cases": {
+    "title": "Alguns dos meus trabalhos:",
+    "disclaimer": "Stack Tecnológica Flexível:* Do domínio absoluto da base (HTML/CSS/JS Vanilla) à arquitetura moderna de alta performance com React e Next.js 14+.",
+    "view_project": "Ver projeto"
+  },
+  "sobre": {
+    "title": "Sobre mim:",
+    "p1": "Sou um desenvolvedor Front-End apaixonado por transformar ideias complexas em experiências digitais fluidas e intuitivas. Com mais de 4 anos de jornada no desenvolvimento web, meu trabalho vai além do código: busco criar interfaces que encantam e engajam, utilizando animações avançadas para dar vida a cada interação.",
+    "p2": "Fui responsável pelo front-end do site da Compagas, a companhia de gás que atende todo o estado do Paraná. Trabalhei no desenvolvimento do site da Furukawa Solutions, uma líder global em tecnologia de fibra óptica. Participei do desenvolvimento do front-end para a Nissei, uma das 10 maiores redes de farmácias do país. E tambem tive o prazer de desenvolver o novo site da NextQuimica, uma empresa que fornece serviços de nanomateriais e que é referência no desenvolvimento de soluções inovadoras para a sociedade.",
+    "p3": "Antes disso, também tive participação em alguns outros grandes projetos, como o novo site do Colégio Pontual e também na criação do novo site do Instituto da Cerveja. Brasil."
+  },
+  "menu": {
+    "curriculo": "Currículo",
+    "contact_label": "Fale comigo",
+    "contato": "Contato"
+  },
+  "contact": {
+    "title": "Me mande uma mensagem!",
+    "subtitle": "Tem uma questão, proposta ou apenas quer dizer oi? Vá em frente.",
+    "name_label": "Seu nome",
+    "name_placeholder": "Digite seu nome",
+    "email_label": "Seu e-mail",
+    "email_placeholder": "Digite seu e-mail",
+    "message_label": "Sua mensagem",
+    "message_placeholder": "Olá, eu acho que precisamos de um design system para um dos nossos produtos na Companhia X. Quando podemos entrar em contato com você pra discutir isso?",
+    "submit": "Enviar",
+    "sending": "Enviando...",
+    "success": "Mensagem enviada com sucesso! Entrarei em contacto em breve.",
+    "error_general": "Ocorreu um erro técnico ao enviar. Tente novamente mais tarde.",
+    "error_form": "Por favor, corrija os erros no formulário.",
+    "error_name_min": "O nome deve ter pelo menos 2 caracteres.",
+    "error_name_max": "Nome muito longo.",
+    "error_email": "Introduza um e-mail válido.",
+    "error_message_min": "A mensagem deve ter pelo menos 10 caracteres.",
+    "error_message_max": "A mensagem não pode ter mais de 2000 caracteres."
+  },
+  "curriculo": {
+    "location": "Minas Gerais, Brasil",
+    "main_tech": "Tecnologias principais:",
+    "styling": "Estilização & UI:",
+    "animations": "Animações",
+    "performance": "Performance & Qualidade:",
+    "backend": "Back-end & DevOps:",
+    "role": "Senior Front-End Engineer",
+    "summary": "Focado na criação de softwares de alto desempenho e acessíveis, além de sistemas escaláveis que geram impacto real nos negócios.",
+    "experience_title": "Experiência",
+    "experience_summary": "Engenharia Front-end com foco em performance e micro-interações. Mais de 4 anos ajudando grandes marcas a transformarem ideias em experiências digitais de alto impacto.",
+    "currently": "Atualmente",
+    "jobs": {
+      "meta": {
+        "company": "META (ALOCADO AO BANCO BMG)",
+        "position": "Desenvolvedor II",
+        "period": "Dezembro/2025 – Atualmente",
+        "summary": "Atuando no ecossistema bancário, sempre focado na segurança e acessibilidade para o usuário.",
+        "points": [
+          "Implementei a arquitetura de Micro Frontends utilizando Webpack Module Federation, reduzindo drasticamente o acoplamento entre as squads de desenvolvimento.",
+          "Defini e estabeleci padrões de componentização em React e TypeScript, que foram adotados com sucesso por todo o time.",
+          "Assegurei a conformidade com regras estritas de segurança e acessibilidade exigidas pelo ecossistema bancário.",
+          "Stack: React, Next.js, TypeScript, GSAP, TailwindCSS, Styled Components, Webpack, Module Federation."
+        ]
+      },
+      "nerdweb": {
+        "company": "NERDWEB",
+        "position": "Arquiteto de Front-End Sênior",
+        "period": "Julho/2023 – Atualmente",
+        "summary": "Atuando como Arquiteto de front-end, pude criar sites para grandes empresas nacionais como: Helyo, Nissei, Positivo, FurukawaSolutions, Byprice, NextQuimica entre inúmeras outras.",
+        "points": [
+          "Lidero decisões técnicas de stack e arquitetura de software para múltiplos projetos de clientes corporativos de grande porte (FurukawaSolutions, Positivo, Compagas, NextQuimica).",
+          "Conduzo entregas com foco absoluto em Core Web Vitals e SEO técnico, garantindo alto ranqueamento orgânico e melhores taxas de conversão.",
+          "Alcancei e mantive pontuações superiores a 94 nas métricas de performance do Google (Lighthouse/Core Web Vitals) em todas as aplicações, garantindo uma experiência de usuário fluida e otimizada.",
+          "Realizo integrações complexas de sistemas utilizando WordPress Headless e APIs REST/GraphQL.",
+          "Stack: React, Next.js, TypeScript, GSAP, TailwindCSS, HTML, SCSS, JavaScript"
+        ]
+      },
+      "seven": {
+        "company": "7 SEVEN TRENDS",
+        "position": "Desenvolvedor Full-Stack Jr",
+        "period": "Abril/2023 – Julho/2023",
+        "summary": "Atuando como Desenvolvedor FullStack Jr, pude aprender muito sobre o ecossistema PHP, principalmente com laravel, além de técnicas de CI/CD e Docker.",
+        "points": [
+          "Desenvolvi o novo site do Colégio Pontual Alfenas e do Instituto da Cerveja Brasil.",
+          "Implementei de APIs REST utilizando PHP",
+          "Apliquei testes automatizados e usei serviços AWS.",
+          "Usei constantemente técnicas de CI/CD para o deploy, integrando testes automatizados e pipelines."
+        ]
+      },
+      "freelancer": {
+        "company": "FREELANCER",
+        "position": "Desenvolvedor Front-End Jr",
+        "period": "Fevereiro/2020 – Abril/2023",
+        "summary": "O início de tudo, onde comecei a desenvolver minhas primeiras páginas para empresas locais e prestei serviços para empresas de design.",
+        "points": [
+          "Criei diversas landing pages com foco em conversão",
+          "Desenvolvi temas personalizados para WordPress.",
+          "Estilizei os projetos de forma avançada com SASS, Styled Components, Framer Motion e Stitches.",
+          "Automatizei tarefas com Gulp, reduzindo o tempo de desenvolvimento em até 40%."
+        ]
+      }
+    }
+  },
+  "language_switcher": {
+    "label": "EN"
+  }
+}

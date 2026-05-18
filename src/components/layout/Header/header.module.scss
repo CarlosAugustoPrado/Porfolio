@@ -9,6 +9,14 @@
 	align-items: center;
 	justify-content: space-between;
 	z-index: 2025;
+	
+	.rightActions {
+		display: flex;
+		align-items: center;
+		gap: 24px;
+		margin-left: auto;
+	}
+
 	@include responsive(1200px) {
 		.mainLogo {
 			display: none;

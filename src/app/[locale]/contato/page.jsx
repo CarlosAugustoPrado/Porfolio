@@ -3,11 +3,16 @@ import styles from "./contato.module.scss";
 import ContactForm from "./ContactForm";
 import ReturnButton from "./ReturnButton";
 
-export const metadata = {
-	title: "Contato | devCarlosAugustoPrado",
-	description: "Envie-me uma mensagem. Vamos conversar sobre o seu próximo projeto.",
-};
+import { getTranslations } from "next-intl/server";
 
+export async function generateMetadata({ params }) {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "metadata" });
+	return {
+		title: t("contato_title"),
+		description: t("contato_description"),
+	};
+}
 export default function CurriculoPage() {
 	return (
 		<main className={styles.mainContato}>

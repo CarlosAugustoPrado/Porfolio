@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { usePathname } from "../../../i18n/routing";
 import ButtonMenu from "./ButtonMenu";
 import Logo from "./Logo";
 import Menu from "./Menu";
@@ -24,7 +24,9 @@ export default function Header() {
 	return (
 		<header className={styles.mainHeader}>
 			{!isContactPage && <Logo className={styles.mainLogo} />}
-			<ButtonMenu onClick={toggleMenu} isOpen={isMenuOpen} />
+			<div className={styles.rightActions}>
+				<ButtonMenu onClick={toggleMenu} isOpen={isMenuOpen} />
+			</div>
 			<Menu isOpen={isMenuOpen} />
 		</header>
 	);

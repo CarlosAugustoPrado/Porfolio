@@ -1,7 +1,11 @@
 import { Inter, Poppins } from "next/font/google";
 import localFont from "next/font/local";
-import "../styles/globals.scss";
-import Header from "../components/layout/Header/Header";
+import "../../styles/globals.scss";
+import Header from "../../components/layout/Header/Header";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "../../i18n/routing";
 
 const sfUIText = localFont({
 	src: [
@@ -33,17 +37,32 @@ const inter = Inter({
 	weight: ["400", "500", "600", "700", "800"],
 });
 
-export const metadata = {
-	title: "Portfolio devCarlosAugustoPrado",
-	description: "Portfolio do desenvolvedor Carlos Augusto Prado com projetos e currículo",
-};
+export async function generateMetadata({ params }) {
+	const { locale } = await params;
+	const t = await getTranslations({ locale, namespace: "metadata" });
 
-export default function RootLayout({ children }) {
+	return {
+		title: t("home_title"),
+		description: t("home_description"),
+	};
+}
+
+export default async function RootLayout({ children, params }) {
+	const { locale } = await params;
+
+	if (!routing.locales.includes(locale)) {
+		notFound();
+	}
+
+	const messages = await getMessages();
+
 	return (
-		<html lang="pt-BR">
+		<html lang={locale}>
 			<body className={`${poppins.variable} ${inter.variable} ${sfUIText.variable}`}>
-				<Header />
-				{children}
+				<NextIntlClientProvider messages={messages}>
+					<Header />
+					{children}
+				</NextIntlClientProvider>
 			</body>
 		</html>
 	);
