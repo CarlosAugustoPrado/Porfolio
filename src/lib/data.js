@@ -5,7 +5,7 @@ const projects = [
 		title: "Compagas",
 		description: {
 			pt: "Novo site da Compagas, Companhia Paranaense de Gás Natural.",
-			en: "New website for Compagas, the Paraná Natural Gas Company."
+			en: "New website for Compagas, the Paraná Natural Gas Company.",
 		},
 		link: "https://www.compagas.com.br/",
 		image: "/images/projects/demo-compagas.png",
@@ -15,7 +15,7 @@ const projects = [
 		title: "NextQuimica",
 		description: {
 			pt: "Projeto do site para a empresa NextQuimica, soluções em nanotecnologia",
-			en: "Website project for NextQuimica, nanotechnology solutions"
+			en: "Website project for NextQuimica, nanotechnology solutions",
 		},
 		link: "https://nextquimica.com.br/",
 		image: "/images/projects/demo-nextquimica.png",
@@ -26,10 +26,10 @@ const projects = [
 		title: "Gobrax",
 		description: {
 			pt: "Novo site da Gobrax, conectividade de frotas",
-			en: "New website for Gobrax, fleet connectivity"
+			en: "New website for Gobrax, fleet connectivity",
 		},
-		link: "https://helyo.com.br/",
-		image: "/images/projects/demo-helyo.png",
+		link: "https://gobrax.com.br/",
+		image: "/images/projects/demo-gobrax.png",
 	},
 
 	{
@@ -37,7 +37,7 @@ const projects = [
 		title: "Helyo",
 		description: {
 			pt: "Novo site da Helyo, soluções em tecnologia",
-			en: "New website for Helyo, technology solutions"
+			en: "New website for Helyo, technology solutions",
 		},
 		link: "https://helyo.com.br/",
 		image: "/images/projects/demo-helyo.png",
@@ -47,7 +47,7 @@ const projects = [
 		title: "Byprice",
 		description: {
 			pt: "Site para a empresa Byprice, do grupo Helyo",
-			en: "Website for Byprice, an Helyo group company"
+			en: "Website for Byprice, an Helyo group company",
 		},
 		link: "https://byprice.com.br/",
 		image: "/images/projects/demo-byprice.png",
@@ -57,7 +57,7 @@ const projects = [
 		title: "Stepfy",
 		description: {
 			pt: "Site para a empresa Stepfy, do grupo Helyo",
-			en: "Website for Stepfy, an Helyo group company"
+			en: "Website for Stepfy, an Helyo group company",
 		},
 		link: "https://stepfy.io/",
 		image: "/images/projects/demo-stepfy.png",
@@ -67,16 +67,16 @@ const projects = [
 		title: "PositivoSEG",
 		description: {
 			pt: "Site para a empresa PositivoSEG, do grupo Positivo",
-			en: "Website for PositivoSEG, a Positivo group company"
+			en: "Website for PositivoSEG, a Positivo group company",
 		},
 		link: "https://www.positivoseg.com.br/",
 		image: "/images/projects/demo-positivoseg.png",
 	},
 ];
 
-export async function getProjects(locale = 'pt') {
+export async function getProjects(locale = "pt") {
 	return projects.map((project) => ({
 		...project,
-		description: project.description[locale] || project.description.pt
+		description: project.description[locale] || project.description.pt,
 	}));
 }
