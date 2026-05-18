@@ -1,0 +1,45 @@
+.languageSwitcher {
+	background: none;
+	border: none;
+	color: #4831d4;
+	font-family: var(--font-poppins);
+	font-size: 1.6rem;
+	font-weight: 500;
+	cursor: pointer;
+	padding: 0.2rem 0;
+	position: relative;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+
+	&::before {
+		--line-width: 100%;
+		--line-height: 1px;
+		--line-easing: ease;
+		--line-transition-duration: 300ms;
+
+		content: "";
+		position: absolute;
+		left: 0px;
+		bottom: 0;
+		width: var(--line-width);
+		height: var(--line-height);
+		transform-origin: right;
+		transform: scaleX(0);
+		background: #4831d4;
+		transition: transform var(--line-transition-duration) var(--line-easing);
+		z-index: 1;
+	}
+
+	&:hover {
+		&::before {
+			transform-origin: left;
+			transform: scaleX(1);
+		}
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+}

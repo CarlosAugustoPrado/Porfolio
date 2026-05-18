@@ -6,9 +6,9 @@ import { z } from "zod";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
-	name: z.string().min(2, { error: "O nome deve ter pelo menos 2 caracteres." }).max(100, { error: "Nome muito longo." }),
-	email: z.email({ error: "Introduza um e-mail válido." }),
-	message: z.string().min(10, { error: "A mensagem deve ter pelo menos 10 caracteres." }).max(2000, { error: "A mensagem não pode ter mais de 2000 caracteres." }),
+	name: z.string().min(2, { message: "error_name_min" }).max(100, { message: "error_name_max" }),
+	email: z.email({ message: "error_email" }),
+	message: z.string().min(10, { message: "error_message_min" }).max(2000, { message: "error_message_max" }),
 });
 
 export type FormState = {
@@ -17,9 +17,8 @@ export type FormState = {
 	errors?: Record<string, string[] | undefined>;
 };
 export async function sendEmailAction(prevState: FormState, formData: FormData): Promise<FormState> {
-	// Honeypot: bots preenchem esse campo, humanos não
 	if (formData.get("_honeypot")) {
-		return { success: false, message: "Spam detectado." };
+		return { success: false, message: "error_general" };
 	}
 
 	const validatedFields = contactSchema.safeParse({
@@ -31,7 +30,7 @@ export async function sendEmailAction(prevState: FormState, formData: FormData):
 	if (!validatedFields.success) {
 		return {
 			success: false,
-			message: "Por favor, corrija os erros no formulário.",
+			message: "error_form",
 			errors: validatedFields.error.flatten().fieldErrors,
 		};
 	}
@@ -49,13 +48,13 @@ export async function sendEmailAction(prevState: FormState, formData: FormData):
 
 		return {
 			success: true,
-			message: "Mensagem enviada com sucesso! Entrarei em contacto em breve.",
+			message: "success",
 		};
 	} catch (error) {
 		console.error("Erro ao enviar e-mail:", error);
 		return {
 			success: false,
-			message: "Ocorreu um erro técnico ao enviar. Tente novamente mais tarde.",
+			message: "error_general",
 		};
 	}
 }

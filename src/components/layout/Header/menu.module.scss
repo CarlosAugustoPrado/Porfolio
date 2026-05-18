@@ -188,6 +188,15 @@
 				}
 			}
 		}
+
+		.languageDivider {
+			display: block;
+			width: 30px;
+			height: 1px;
+			background: rgba(72, 49, 212, 0.25);
+			margin-top: 18px;
+			margin-bottom: 14px;
+		}
 	}
 	&::before {
 		top: 0;
@@ -234,6 +243,14 @@
 			transition:
 				opacity 0.4s ease 0.45s,
 				transform 0.4s ease 0.45s;
+		}
+
+		.languageSwitcherWrap {
+			opacity: 1;
+			transform: translateY(0);
+			transition:
+				opacity 0.4s ease 0.55s,
+				transform 0.4s ease 0.55s;
 		}
 	}
 	@include responsive(768px) {

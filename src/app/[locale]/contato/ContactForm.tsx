@@ -3,6 +3,7 @@
 import { useActionState } from "react";
 import { useFormStatus } from "react-dom";
 import { sendEmailAction, type FormState } from "./actions";
+import { useTranslations } from "next-intl";
 
 import styles from "./contato.module.scss";
 
@@ -13,14 +14,15 @@ const initialState: FormState = {
 
 function SubmitButton() {
 	const { pending } = useFormStatus();
+	const t = useTranslations("contact");
 
 	return (
 		<button type="submit" disabled={pending} aria-disabled={pending} className={styles.submitButton}>
 			{pending ? (
-				"Enviando..."
+				t("sending")
 			) : (
 				<>
-					Enviar
+					{t("submit")}
 					<svg width="72" height="22" viewBox="0 0 72 22" xmlns="http://www.w3.org/2000/svg" className="bow-arrow">
 						<path
 							fill="none"
@@ -38,6 +40,7 @@ function SubmitButton() {
 
 export default function ContactForm() {
 	const [state, formAction] = useActionState(sendEmailAction, initialState);
+	const t = useTranslations("contact");
 
 	return (
 		<form action={formAction} className={styles.formContainer} noValidate>
@@ -50,54 +53,54 @@ export default function ContactForm() {
 				aria-hidden="true"
 			/>
 			<div className={styles.header}>
-				<h1>Me mande uma mensagem!</h1>
-				<p>Tem uma questão, proposta ou apenas quer dizer oi? Vá em frente.</p>
+				<h1>{t("title")}</h1>
+				<p>{t("subtitle")}</p>
 			</div>
 
 			<div className={styles.row}>
 				<div className={styles.inputGroup}>
-					<label htmlFor="name">Seu nome</label>
+					<label htmlFor="name">{t("name_label")}</label>
 					<input
 						type="text"
 						id="name"
 						name="name"
-						placeholder="Digite seu nome"
+						placeholder={t("name_placeholder")}
 						aria-describedby={state?.errors?.name ? "name-error" : undefined}
 						required
 						className={state?.errors?.name ? styles.inputError : ""}
 					/>
 					{state?.errors?.name && (
 						<span id="name-error" aria-live="polite" className={styles.errorText}>
-							{state.errors.name[0]}
+							{t(state.errors.name[0])}
 						</span>
 					)}
 				</div>
 
 				<div className={styles.inputGroup}>
-					<label htmlFor="email">Seu e-mail</label>
+					<label htmlFor="email">{t("email_label")}</label>
 					<input
 						type="email"
 						id="email"
 						name="email"
-						placeholder="Digite seu e-mail"
+						placeholder={t("email_placeholder")}
 						aria-describedby={state?.errors?.email ? "email-error" : undefined}
 						required
 						className={state?.errors?.email ? styles.inputError : ""}
 					/>
 					{state?.errors?.email && (
 						<span id="email-error" aria-live="polite" className={styles.errorText}>
-							{state.errors.email[0]}
+							{t(state.errors.email[0])}
 						</span>
 					)}
 				</div>
 			</div>
 
 			<div className={styles.inputGroup}>
-				<label htmlFor="message">Sua mensagem</label>
+				<label htmlFor="message">{t("message_label")}</label>
 				<textarea
 					id="message"
 					name="message"
-					placeholder="Olá, eu acho que precisamos de um design system para um dos nossos produtos na Companhia X. Quando podemos entrar em contato com você pra discutir isso?"
+					placeholder={t("message_placeholder")}
 					rows={5}
 					aria-describedby={state?.errors?.message ? "message-error" : undefined}
 					required
@@ -105,14 +108,14 @@ export default function ContactForm() {
 				/>
 				{state?.errors?.message && (
 					<span id="message-error" aria-live="polite" className={styles.errorText}>
-						{state.errors.message[0]}
+						{t(state.errors.message[0])}
 					</span>
 				)}
 			</div>
 
 			{state?.message && !state.errors && (
 				<div role="alert" className={state.success ? styles.successMessage : styles.errorMessage}>
-					{state.message}
+					{t(state.message)}
 				</div>
 			)}
 

@@ -1,10 +1,11 @@
 import styles from "./disclaimer.module.scss";
+import { useTranslations } from "next-intl";
 
 export default function Disclaimer() {
+	const t = useTranslations("cases");
 	return (
 		<p className={styles.disclaimer}>
-			Stack Tecnológica Flexível:* Do domínio absoluto da base (HTML/CSS/JS Vanilla) à arquitetura moderna de alta
-			performance com React e Next.js 14+.
+			{t("disclaimer")}
 		</p>
 	);
 }

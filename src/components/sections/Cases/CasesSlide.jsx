@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import styles from "./cases-slide.module.scss";
 
 export default function CaseSlide({ project }) {
 	const { title, description, link, image } = project;
+	const t = useTranslations("cases");
 
 	return (
 		<div className={styles.case}>
@@ -16,7 +18,7 @@ export default function CaseSlide({ project }) {
 				<h3>{title}</h3>
 				<p>{description}</p>
 				<Link href={link} target="_blank" rel="noopener noreferrer">
-					<span>Ver projeto</span>
+					<span>{t("view_project")}</span>
 				</Link>
 			</div>
 		</div>
